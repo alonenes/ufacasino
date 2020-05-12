@@ -363,6 +363,12 @@
   cursor: pointer;
 }
 
+.nav-logo.hide-mb {
+  display: none;
+}
+
+
+
 .contact-fix {
   position: fixed;
   left: auto;
@@ -597,6 +603,76 @@
 .img-logo-header{
   width: 300px;
 }
+
+.img-logo-header.img-roulet{
+  width: 68px;
+  position: absolute;
+  left: 27.5rem;
+  top: 28.5rem;
+  z-index: 1;
+
+  -webkit-animation-name: translateY1;
+  animation-name: translateY1;
+  -webkit-animation-duration: 4.5s;
+  animation-duration: 4.5s;
+  -webkit-animation-delay: 1s;
+   animation-delay: 0s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+.img-logo-header.img-dice{
+  width: 68px;
+  position: absolute;
+  left: 43.5rem;
+  top: 32.5rem;
+  z-index: 1;
+
+  -webkit-animation-name: translateY2;
+  animation-name: translateY2;
+  -webkit-animation-duration: 4.5s;
+  animation-duration: 4.5s;
+  -webkit-animation-delay: 1s;
+   animation-delay: 0s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+.img-logo-header.img-slot{
+  width: 68px;
+  position: absolute;
+  left: 43.5rem;
+  top: 58.5rem;
+  z-index: 1;
+
+  -webkit-animation-name: translateY2;
+  animation-name: translateY2;
+  -webkit-animation-duration: 4.5s;
+  animation-duration: 4.5s;
+  -webkit-animation-delay: 1s;
+   animation-delay: 0s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+.img-logo-header.img-coin{
+  width: 59px;
+  position: absolute;
+  left: 28rem;
+  top: 54rem;
+  z-index: 1;
+
+  -webkit-animation-name: translateY1;
+  animation-name: translateY1;
+  -webkit-animation-duration: 4.5s;
+  animation-duration: 4.5s;
+  -webkit-animation-delay: 1s;
+   animation-delay: 0s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+
 
 .div-logo-header{
   padding-bottom: 20px;
@@ -1671,6 +1747,15 @@ caption {
   .nav-logo {
     width: 78px;
   }
+
+  .nav-logo.hide-mb {
+    display: block;
+  }
+
+  .nav-logo.hide-mb1 {
+    display: none;
+  }
+
   .contact-fix {
     right: -16%;
     bottom: 12%;
@@ -1848,8 +1933,10 @@ caption {
     padding: 3px 15px;
     display: block;   
     font-size: 13px;
-    color: #e8aa00; 
-    border-color: #fffa00;
+    /* color: #e8aa00; 
+    border-color: #fffa00; */
+    color: white; 
+    border-color: white;
   }
 
   .nav-btn-second {
@@ -1883,7 +1970,28 @@ caption {
 .btn-primary.btn_login{
   display: block;
 }
-/* Absolute Text Game */
+
+.img-logo-header.img-roulet{
+  left: 4.5rem;
+  top: 21.5rem;
+}
+
+.img-logo-header.img-dice{
+  left: 15.5rem;
+  top: 23.5rem;
+}
+
+.img-logo-header.img-coin{
+  left: 5.5rem;
+  top: 41.5rem;
+  width: 13%;
+}
+
+.img-logo-header.img-slot{
+  width: 50px;
+  left: 15.3rem;
+  top: 44.5rem;
+}
 
 
 }
