@@ -40,6 +40,25 @@
   }
 }
 
+
+@keyframes rotate-small{
+    0% {
+    -webkit-transform: translateY(-14px);
+    transform: rotate3d(0, 1, 1, 30deg);
+  }
+
+  50% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-14px);
+    transform: rotate3d(0, 1, 1, 30deg);
+  }
+}
+
+
+
 @keyframes glow{
   0% { box-shadow: 0 0 10px  #8c61f8bb;  }
   /* 25% { box-shadow: 0 0 25px  #8b61f8ee; } */

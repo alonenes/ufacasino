@@ -1,4 +1,5 @@
 @import './animate.css';
+@import './pop_menu.css';
 
 .main_content {
   position: relative;
@@ -60,10 +61,10 @@
   padding-top: 40px;
   padding-bottom: 40px;
   border-style: solid;
-  border-width: 1px;
-  border-color: #886e21;
+  border-width: 2px;
+  border-color: white;
   border-radius: 10px;
-  background-color: rgba(85, 86, 94, 0.64);
+  background-color: rgba(0, 28, 255, 0.14);
 }
 
 .text-header {
@@ -137,7 +138,7 @@
 .btn-primary.btn_promotion {
   margin-top: 20px;
   border-color: #fffa00;
-  background-color: #e8aa00;
+  color: #f6ca5f;
 }
 
 .btn-primary.btn_login{
@@ -373,10 +374,10 @@
   position: fixed;
   left: auto;
   top: auto;
-  right: -2%;
-  bottom: 15%;
+  right: 8%;
+  bottom: 8%;
   z-index: 2;
-  padding-right: 20px;
+  
 }
 
 .div-service {
@@ -628,8 +629,8 @@
   top: 32.5rem;
   z-index: 1;
 
-  -webkit-animation-name: translateY2;
-  animation-name: translateY2;
+  -webkit-animation-name: rotate-small;
+  animation-name: rotate-small;
   -webkit-animation-duration: 4.5s;
   animation-duration: 4.5s;
   -webkit-animation-delay: 1s;
@@ -878,9 +879,8 @@
   bottom: 0%;
   padding-top: 10px;
   padding-bottom: 0px;
-  background-color: #ecaf2f;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 205, 24, 0.38)), to(rgba(255, 205, 24, 0.38)));
-  background-image: linear-gradient(180deg, rgba(255, 205, 24, 0.38), rgba(255, 205, 24, 0.38));
+  background-image: linear-gradient(326deg, #a4508b 0%, #5f0a87 74%);
+  z-index: 100;
 }
 
 .list-4 {
@@ -901,8 +901,8 @@
 
 .text-block {
   font-family: Prompt, sans-serif;
-  color: #000;
-  font-size: 12px;
+  color: white;
+  font-size: 14px;
   text-align: center;
 }
 
@@ -1746,6 +1746,7 @@ caption {
   }
   .nav-logo {
     width: 78px;
+    z-index: 0;
   }
 
   .nav-logo.hide-mb {
@@ -1832,8 +1833,8 @@ caption {
   .menu-mobile {
     display: block;
     background-color: #f8a800;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 205, 24, 0.34)), to(rgba(255, 205, 24, 0.34)));
-    background-image: linear-gradient(180deg, rgba(255, 205, 24, 0.34), rgba(255, 205, 24, 0.34));
+    background-image: -webkit-gradient(linear-gradient(326deg, #a4508b 0%, #5f0a87 74%));
+    background-image: linear-gradient(326deg, #a4508b 0%, #5f0a87 74%);
   }
   .list-4 {
     -webkit-justify-content: space-around;
@@ -1908,6 +1909,7 @@ caption {
 
   .img-logo-header{
     width: 50%;
+    z-index: 0;
   }
 
   .text-game-logo {
