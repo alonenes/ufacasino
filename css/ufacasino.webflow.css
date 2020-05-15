@@ -171,7 +171,7 @@
   margin-top: 10px;
   font-family: Prompt, sans-serif;
   color: #fff;
-  font-size: 133%;
+  font-size: 150%;
   font-weight: 400;
   text-align: center;
 }
@@ -295,7 +295,7 @@
 }
 
 .grow.tab-menu-logo2 {
-  width: 44px;
+  width: 59px;
 }
 
 .div-header {
@@ -325,7 +325,7 @@
   position: absolute;
   -webkit-transform: rotate(20deg);
   -ms-transform: rotate(20deg);
-  transform: rotate(20deg);
+  transform: rotate(-12deg);
 }
 
 .list-logo {
@@ -333,6 +333,7 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  flex-wrap: wrap;
   margin: auto;
   padding-left: 0px;
   -webkit-box-pack: center;
@@ -364,7 +365,7 @@
   cursor: pointer;
 }
 
-.nav-logo.hide-mb {
+.item-nav.hide-mb {
   display: none;
 }
 
@@ -416,8 +417,36 @@
 
 .image-casino {
   position: static;
+  /* padding: 0 0 0 50px; */
+  margin: 0 auto;
   top: auto;
   width: 100%;
+
+  -webkit-animation-name: translateY1;
+  animation-name: translateY1;
+  -webkit-animation-duration: 4.5s;
+  animation-duration: 4.5s;
+  -webkit-animation-delay: 1s;
+   animation-delay: 0s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+.image-casino.img-coins{
+  width: 300px;
+  position: absolute;
+  left: -0.5rem;
+  top: -3rem;
+  z-index: 1;
+
+  -webkit-animation-name: translateY2;
+  animation-name: translateY2;
+  -webkit-animation-duration: 4.5s;
+  animation-duration: 4.5s;
+  -webkit-animation-delay: 1s;
+   animation-delay: 0s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
 }
 
 .subtitle-casino {
@@ -609,7 +638,7 @@
   width: 68px;
   position: absolute;
   left: 27.5rem;
-  top: 28.5rem;
+  top: 0rem;
   z-index: 1;
 
   -webkit-animation-name: translateY1;
@@ -625,8 +654,8 @@
 .img-logo-header.img-dice{
   width: 68px;
   position: absolute;
-  left: 43.5rem;
-  top: 32.5rem;
+  left: 44rem;
+  top: 4rem;
   z-index: 1;
 
   -webkit-animation-name: rotate-small;
@@ -640,10 +669,10 @@
 }
 
 .img-logo-header.img-slot{
-  width: 68px;
+  width: 82px;
   position: absolute;
   left: 43.5rem;
-  top: 58.5rem;
+  top: 4.5rem;
   z-index: 1;
 
   -webkit-animation-name: translateY2;
@@ -660,7 +689,7 @@
   width: 59px;
   position: absolute;
   left: 28rem;
-  top: 54rem;
+  top: 0rem;
   z-index: 1;
 
   -webkit-animation-name: translateY1;
@@ -676,6 +705,7 @@
 
 
 .div-logo-header{
+  position: relative;
   padding-bottom: 20px;
 }
 
@@ -698,9 +728,9 @@
 
 .img-logo-casino.casino-grow:hover {
   box-shadow: 0 0 3px 0 #f9f0f0;
-  -webkit-transform: scale(1.05);
-  -ms-transform: scale(1.05);
-  transform: scale(1.05);
+  -webkit-transform: scale(1.02);
+  -ms-transform: scale(1.02);
+  transform: scale(1.02);
 }
 
 .container-casino {
@@ -773,26 +803,43 @@
 
 .bg-casino1 {
   position: absolute;
-  left: -31px;
-  top: 220px;
+  left: 7%;
+  top: 6%;
+  bottom: auto;
+  opacity: 0.8;
+  -webkit-animation: x-bg-2 8s ease infinite;
+  animation: x-bg-2 8s ease infinite;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
+.bg-casino2 {
+  z-index: 0;
+  width: 29%;
+  position: absolute;
+  top: 4%;
+  bottom: auto;
+  left: auto;
+  right: 8%;
+  opacity: 1;
+  -webkit-animation: x-bg-1 8s ease infinite;
+  animation: x-bg-1 8s ease infinite;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
+
+.bg-casino3 {
+  position: absolute;
+  width: 42%;
+  left: 16%;
+  top: 6%;
   bottom: auto;
   opacity: 0.8;
   -webkit-animation: x-bg-2 8s ease infinite;
   animation: x-bg-2 8s ease infinite;
   -webkit-animation-delay: 2s;
   animation-delay: 2s;
-}
-
-.bg-casino2 {
-  z-index: 0;
-  position: absolute;
-  top: 86px;
-  right: 100px;
-  opacity: 1;
-  -webkit-animation: x-bg-1 8s ease infinite;
-  animation: x-bg-1 8s ease infinite;
-  -webkit-animation-delay: 1s;
-  animation-delay: 1s;
 }
 
 @keyframes x-bg-1{
@@ -1093,44 +1140,60 @@
     margin-top: -1rem!important
 }
 
-.card-promotion-landing {
-  margin-bottom: 2rem;
-  background-image: -webkit-gradient(linear, left top, right top, from(#3e251d), color-stop(25%, #8e7757), color-stop(50%, #fae0a3), color-stop(75%, #eaca85), to(#b89247));
-  background-image: linear-gradient(90deg, #3e251d 0, #8e7757 25%, #fae0a3 50%, #eaca85 75%, #b89247);
-  padding: 5px;
-  max-width: 280px;
-  margin: 0 auto
-}
+  .card-promotion-landing {
+    margin-bottom: 2rem;
+ 
+    background-color: transparent;
 
-.card-promotion-landing {
-  background-image: linear-gradient(90deg, #9f7239 0, #d6a850 25%, #fae0a3 50%, #eaca85 75%, #f3c86a) !important; 
-  max-width: 350px;
-}
+    
 
-.card-promotion-landing .img {
-  background-size: cover;
-  background-position: 50%;
-  background-repeat: no-repeat;
-  padding-top: 100%;
-  transition-delay: 0.3s ease-in-out;
-  cursor: pointer;
-}
+    padding: 5px;
+    max-width: 280px;
+    margin: 0 auto
+  }
+  
+  .card-promotion-landing { 
+    max-width: 350px;
+  }
+  
+  .card-promotion-landing .img {
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    padding-top: 100%;
+    transition-delay: 0.3s ease-in-out;
+    cursor: pointer;
+  }
+  
+  .card-promotion-landing:hover {
+    animation-name: tada;
+    animation-duration: 1200ms;
+  }
+  
+  .card-promotion-landing1 {
+    border-radius: 5px;
+    border: 2px solid purple;
+  }
+  
+  .card-promotion-landing1:hover .text-overflow {
+    background-image: linear-gradient(90deg, #65088a 0, #65088a 25%, #65088a 50%, #65088a 75%, #65088a) !important;
+    color: #fff;
+  }
 
-.card-promotion-landing:hover .img {
-  animation-name: tada;
-  animation-duration: 1500ms;
-}
+  .text-overflow {
+    background-image: radial-gradient(circle, #9921e8 0%, #5f72be 100%) !important;
+   
+    color: white;
+    padding: 5px;
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+  }
 
-.card-promotion-landing1 {
-  border-radius: 5px;
-  border: 1px solid rgb(255, 215, 0);
-  background-image: linear-gradient(180deg, #e8b94d 0, #352c16 49%, #1c1817 80%, #1c1817 75%, #1c1817) !important;
-}
-
-.card-promotion-landing1:hover .text-overflow {
-  background-image: linear-gradient(90deg, #1c1817 0, #1c1817 25%, #1c1817 50%, #1c1817 75%, #1c1817) !important;
-  color: #fff;
-}
 
 .img-slot4 {
   width: 100%;
@@ -1153,8 +1216,8 @@ caption {
 }
 
 .text-overflow {
-  background-image: linear-gradient(90deg, #976a36 0, #d4a54d 25%, #fcdf88 50%, #ffd577 75%, #eec465) !important;
-  color: #1f1f1f;
+  /* background-image: linear-gradient(90deg, #976a36 0, #d4a54d 25%, #fcdf88 50%, #ffd577 75%, #eec465) !important; */
+  color: white;
   padding: 5px;
   font-size: 14px;
   white-space: nowrap;
@@ -1166,7 +1229,7 @@ caption {
 
 .text-game-color{
   font-family: Prompt, sans-serif;
-  color: #000;
+  color: white;
   transition: ease-in-out 100ms;
 }
 
@@ -1245,6 +1308,7 @@ caption {
 }
 
 #main_container {
+  overflow: hidden;
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -1295,7 +1359,7 @@ caption {
 
 .text-game-logo {
   font-family: Prompt, sans-serif;
-  background-color: rgb(53, 57, 53);
+  background-color: #3c1766;
   font-size: 20px;
   border-radius: 17px;
   color: #edbc26;
@@ -1335,6 +1399,10 @@ caption {
   transition: .8s;
   -webkit-transition: .8s;
   } */
+
+  .h_iframe{
+    height: 99vh;
+  }
 
 
 
@@ -1545,7 +1613,7 @@ caption {
   }
   .btn-primary.btn_promotion {
     margin-top: 30px;
-    display: none;
+    /* display: none; */
   }
 
   .btn-primary.btn_login {
@@ -1710,7 +1778,7 @@ caption {
     max-width: 100%;
   }
   .grow.service-logo {
-    width: 80%;
+    width: 60%;
     text-align: center;
   }
   .grow.tab-menu-logo {
@@ -1718,7 +1786,7 @@ caption {
     max-width: 100%;
   }
   .grow.tab-menu-logo2 {
-    width: 35px;
+    width: 48px;
   }
   .div-text-header {
     margin-left: 0px;
@@ -1749,11 +1817,11 @@ caption {
     z-index: 0;
   }
 
-  .nav-logo.hide-mb {
+  .item-nav.hide-mb {
     display: block;
   }
 
-  .nav-logo.hide-mb1 {
+  .item-nav.hide-mb1 {
     display: none;
   }
 
@@ -1817,10 +1885,11 @@ caption {
     text-align: left;
   }
   .div-detail-service {
+    width: 100%;
     text-align: left;
   }
   .div-img-service {
-    text-align: left;
+    text-align: center;
   }
   .text-span-6 {
     font-size: 17px;
@@ -1975,24 +2044,55 @@ caption {
 
 .img-logo-header.img-roulet{
   left: 4.5rem;
-  top: 21.5rem;
+  top: 0rem;
 }
 
 .img-logo-header.img-dice{
-  left: 15.5rem;
-  top: 23.5rem;
+  left: 15rem;
+  top: 2rem;
 }
 
 .img-logo-header.img-coin{
   left: 5.5rem;
-  top: 41.5rem;
+  top: 0rem;
   width: 13%;
 }
 
 .img-logo-header.img-slot{
   width: 50px;
   left: 15.3rem;
-  top: 44.5rem;
+  top: 3.5rem;
+}
+
+.bg-casino1{
+  width: 83%;
+  top: 15%;
+}
+
+
+
+.bg-casino3 {
+  width: 74%;
+  top: 15%;
+}
+
+.img-about {
+  display: none;
+}
+
+.image-casino{
+  width: 228px;
+  left: 1.5rem;
+}
+
+.image-casino.img-coins{
+  top: -1rem;
+  left: 1.5rem;
+  width: 221px;
+}
+
+.h_iframe {
+  height: 85vh;
 }
 
 

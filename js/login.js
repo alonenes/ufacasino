@@ -11,8 +11,8 @@ $('#btn-login-submit').click(function() {
         console.log('checkUsername: ',checkUsername)
     
         axios.post('https://sportbook-ambbet.serverless-hub.com/spa/member/login', data).then(function(res) {
-            console.log('res.data.code :',res.data.code)
-            console.log('https://sportbook-ambbet.serverless-hub.com/spa/member/login', data)
+        
+        // console.log("EXP :",res.exp)
             if (res.data.code === 0) {
                 sessionStorage.setItem("token", res.data.result.access_token);
                 sessionStorage.setItem('user', JSON.stringify(res.data.result.profile));
