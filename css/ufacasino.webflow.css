@@ -85,6 +85,7 @@
 
 .body {
   margin-top: -22px;
+  /* overflow: hidden; */
 }
 
 .button_header {
@@ -503,7 +504,9 @@
 }
 
 .container-nav {
-  display: block;
+  width: 100%;
+  display: flex;
+  align-items: center;
   margin-right: auto;
   margin-left: auto;
   -webkit-box-pack: justify;
@@ -519,8 +522,12 @@
 }
 
 .logo-brand.grow {
-  width: 240px;
+  width: 8rem;
   /* margin-right: 4px; */
+}
+
+.logo-brand-login {
+  width: 5rem;
 }
 
 .list-3 {
@@ -1013,7 +1020,7 @@
   border-width: 1px;
   border-color: #edd413;
   border-radius: 9px;
-  background-color: #db9a22;
+  background-color: #5f0a87;
   -webkit-transition: -webkit-transform 200ms ease;
   transition: -webkit-transform 200ms ease;
   transition: transform 200ms ease;
@@ -1400,8 +1407,17 @@ caption {
   -webkit-transition: .8s;
   } */
 
-  .h_iframe{
-    height: 99vh;
+  .h_iframe {
+    display: block;
+    height: calc(100vh - 66.25px);
+  }
+
+  .img-login{
+    width: 18rem;
+  }
+
+  .bg-dark{
+    background-color: black;
   }
 
 
@@ -1498,7 +1514,7 @@ caption {
     display: inline-block;
   }
   .list-3 {
-    width: 100%;
+    width: 82%;
     max-width: 96%;
   }
   .nav-btn-primary {
@@ -1596,6 +1612,7 @@ caption {
     width: 310px;
     /* margin-right: 4px; */
   }
+  
   
 
   .nav-menu{
@@ -1849,7 +1866,8 @@ caption {
     max-width: 92%
   }
   .logo-brand.grow {
-    width: 200px;
+    margin-top: 0px;
+    width: 137px;
   }
   .nav-btn-primary.hide {
     display: none;
@@ -1937,6 +1955,7 @@ caption {
     margin-right: auto;
     margin-left: auto;
     /* padding-top: 100px; */
+    padding-top: 0px;
     padding-right: 60px;
     padding-left: 60px;
     width: auto;
@@ -2093,6 +2112,10 @@ caption {
 
 .h_iframe {
   height: 85vh;
+}
+
+.logo-brand-login{
+  width: 9rem;
 }
 
 

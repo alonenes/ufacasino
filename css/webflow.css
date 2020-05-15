@@ -257,7 +257,7 @@ figcaption {
 ul,
 ol {
   margin-top: 0px;
-  margin-bottom: 10px;
+  margin-bottom: 0px;
   padding-left: 40px;
 }
 .w-list-unstyled {
