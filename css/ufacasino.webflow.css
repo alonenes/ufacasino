@@ -522,7 +522,7 @@
 }
 
 .logo-brand.grow {
-  width: 8rem;
+  width: 6rem;
   /* margin-right: 4px; */
 }
 
@@ -1060,7 +1060,7 @@
 .container-warp-login.inner-wrapper {
   margin: 0 auto;
   width: 500px;
-  padding-top: 200px;
+  padding-top: 130px;
   /* padding-right: 320px;
   padding-left: 320px; */
 }
