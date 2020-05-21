@@ -1409,16 +1409,23 @@ caption {
 
   .h_iframe {
     display: block;
-    height: calc(100vh - 66.25px);
+    height: calc(100vh - 68px);
   }
 
   .img-login{
     width: 18rem;
+    -webkit-animation: shake-bottom 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+     animation: shake-bottom 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
   }
 
   .bg-dark{
     background-color: black;
+    overflow: hidden;
   }
+  
+
+
+  
 
 
 
@@ -1499,7 +1506,8 @@ caption {
     width: 130px;
   }
   .contact-fix {
-    right: -6%;
+    right: 14%;
+    bottom: 12%;
   }
   .div-service {
     text-align: center;
@@ -1606,17 +1614,34 @@ caption {
 
   .container-nav {
     display: inline-flex;
+    width: 20%;
   }
   
   .logo-brand.grow {
-    width: 310px;
+    width: 6rem;
     /* margin-right: 4px; */
   }
   
-  
-
   .nav-menu{
     display: none;
+  }
+
+  .img-logo-header.img-roulet{
+    left: 13.5rem;
+  }
+  
+  .img-logo-header.img-dice{
+    left: 30rem;
+  }
+  
+  .img-logo-header.img-coin{
+    left: 13.8rem;
+    width: 9%;
+  }
+  
+  .img-logo-header.img-slot{
+    width: 9%;
+    left: 30rem;
   }
 
 }
@@ -2115,7 +2140,12 @@ caption {
 }
 
 .logo-brand-login{
-  width: 9rem;
+  width: 6rem;
+}
+
+.container-nav {
+  /* display: inline-flex; */
+  width: 100%;
 }
 
 
