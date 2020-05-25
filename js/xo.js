@@ -69,8 +69,8 @@ function checkWindow() {
 
 let listGame;
 const endpoint = 'https://ambbet.secure-restapi.com';
-const pgGameListURL = 'https://dmn5cgu275.execute-api.ap-southeast-1.amazonaws.com/viewbet/pg/list-games'
-const gamatronGameListURL = 'https://aub6j8ozff.execute-api.ap-southeast-1.amazonaws.com/viewbet/ganapati/list-games'
+const pgGameListURL = 'https://s7w4qs867f.execute-api.ap-southeast-1.amazonaws.com/amb/pg/list-games'
+const gamatronGameListURL = 'https://0j44b5wfma.execute-api.ap-southeast-1.amazonaws.com/amb/ganapati/list-games'
 
 
 async function getGamePG() {

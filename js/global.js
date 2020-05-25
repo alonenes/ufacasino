@@ -132,7 +132,7 @@ async function ag() {
 
     if (chkstatus == true) {
        
-        let uri = endpointcasino + '/agg/login?gameId=1&prefix=ALLSTAR&website=https://viewbet.com&client=';
+        let uri = endpointcasino + '/agg/login?gameId=1&prefix=AMBBET&website=https://viewbet.com&client=';
 
         if (isMobile()) {
             uri = uri + 'MB'
