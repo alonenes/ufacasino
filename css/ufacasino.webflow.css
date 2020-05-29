@@ -83,6 +83,8 @@
   white-space: normal;
 }
 
+
+
 .body {
   margin-top: -22px;
   /* overflow: hidden; */
@@ -141,6 +143,8 @@
   border-color: #fffa00;
   color: #f6ca5f;
 }
+
+
 
 .btn-primary.btn_login{
   display: none;
@@ -320,13 +324,25 @@
   color: #f0ede7;
   font-size: 402%;
   text-shadow: 1px 1px 6px #000;
+  padding: 10px 0px;
+}
+
+.heading.text-header.gold-metelic{
+  background: -webkit-linear-gradient(top, #8f6B29, #FDE08D, #DF9F28);
+	background: linear-gradient(top, #8f6B29, #FDE08D, #DF9F28);
+	-webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+  /* -webkit-text-stroke-width: 1px; */
+  -webkit-text-stroke-color: black;
+  text-shadow: none;  
 }
 
 .logo-coin-header {
   position: absolute;
-  -webkit-transform: rotate(20deg);
-  -ms-transform: rotate(20deg);
-  transform: rotate(-12deg);
+  -webkit-transform: rotate(50deg);
+  -ms-transform: rotate(50deg);
+  transform: rotate(50deg);
 }
 
 .list-logo {
@@ -392,9 +408,9 @@
 
 .image-ufacasino {
   position: relative;
-  width: 80%;
+  width: 63%;
   height: auto;
-  left: -3%;
+  left: -4%;
 }
 
 .heading-2 {
@@ -403,6 +419,7 @@
   font-size: 230%;
   font-weight: 400;
   text-align: left;
+  margin-top: 10px;
 }
 
 .text-span-2 {
@@ -500,7 +517,7 @@
 }
 
 .img-about {
-  width: 75%;
+  width: 95%;
 }
 
 .container-nav {
@@ -512,7 +529,7 @@
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 .logo-brand {
@@ -522,7 +539,7 @@
 }
 
 .logo-brand.grow {
-  width: 6rem;
+  width: 7.5rem;
   /* margin-right: 4px; */
 }
 
@@ -568,6 +585,11 @@
 
 .nav-btn-primary.hide {
   display: none;
+}
+
+.yellow_btn{
+  border-color: #fffa00;
+  color: #f6ca5f;
 }
 
 .nav-menu {
@@ -1008,7 +1030,7 @@
 
 .container-logo {
   margin-top: 10px;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .btn-login {
@@ -1406,6 +1428,7 @@ caption {
   transition: .8s;
   -webkit-transition: .8s;
   } */
+  
 
   .h_iframe {
     display: block;
@@ -1413,7 +1436,7 @@ caption {
   }
 
   .img-login{
-    width: 18rem;
+    width: 25rem;
     -webkit-animation: shake-bottom 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
      animation: shake-bottom 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
   }
@@ -1422,6 +1445,8 @@ caption {
     background-color: black;
     overflow: hidden;
   }
+
+  
   
 
 
@@ -1842,11 +1867,24 @@ caption {
   .heading.text-header {
     font-size: 230%;
   }
+
+  .heading.text-header.gold-metelic{
+    font-size: 190%;
+    background: -webkit-linear-gradient(top, #8f6B29, #FDE08D, #DF9F28);
+    background: linear-gradient(top, #8f6B29, #FDE08D, #DF9F28);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 0px 0px;
+    
+    /* -webkit-text-stroke-width: 1px; */
+    -webkit-text-stroke-color: black;
+    text-shadow: none;  
+  }
   .logo-coin-header {
-    top: 15px;
-    right: 35px;
+    top: 22px;
+    right: 4%;
     z-index: 2;
-    width: 13%;
+    width: 11%;
   }
   .list-logo {
     -webkit-box-pack: center;
@@ -2053,6 +2091,11 @@ caption {
     color: white; 
     border-color: white;
   }
+
+  .yellow_btn {
+    border-color: #fffa00;
+    color: #f6ca5f;
+}
 
   .nav-btn-second {
     display: none;
