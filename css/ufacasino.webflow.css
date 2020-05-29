@@ -621,9 +621,9 @@
 
 .img-logo-casino.casino-grow:hover {
   box-shadow: 0 0 3px 0 #f9f0f0;
-  -webkit-transform: scale(1.05);
-  -ms-transform: scale(1.05);
-  transform: scale(1.05);
+  -webkit-transform: scale(1.03);
+  -ms-transform: scale(1.03);
+  transform: scale(1.03);
 }
 
 .container-casino {
