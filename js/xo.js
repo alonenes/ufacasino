@@ -3,7 +3,7 @@ function isLine() {
 }
 
 
-$(function() {
+$(function () {
     if (!sessionStorage.getItem('token')) {
         location.href = 'login.html'
     }
@@ -39,7 +39,7 @@ $(function() {
     }
 
     if (type == 'amb') {
-        getGamePG();
+        gameLogin();
     }
 });
 
@@ -287,7 +287,12 @@ async function getAmbgame() {
 async function xoLogin(gameCode) {
     let uri = endpoint + '/slot-xo/forward-to-game';
 
-    let data = { "gameCode": gameCode, "language": "EN", "isMobile": "false", "redirectUrl": "" };
+    let data = {
+        "gameCode": gameCode,
+        "language": "EN",
+        "isMobile": "false",
+        "redirectUrl": ""
+    };
 
     if (isLine()) {
         let resp = await axios.post(uri, data)
@@ -298,7 +303,7 @@ async function xoLogin(gameCode) {
             alert(JSON.stringify(result.data.message))
             // gameWindow.close();
         }
-    }else{
+    } else {
         checkWindow()
 
         let resp = await axios.post(uri, data)
@@ -311,7 +316,7 @@ async function xoLogin(gameCode) {
         }
     }
 
-    
+
 
 }
 
@@ -327,7 +332,7 @@ async function dsLogin(gameId) {
         } else {
             alert(JSON.stringify(result.data.message))
         }
-        
+
     }
 
     checkWindow()
@@ -353,9 +358,9 @@ async function amebaLogin(gameId) {
             location.href = resp.data.url;
         } else {
             alert(JSON.stringify(result.data.message))
- 
+
         }
-    }else{
+    } else {
         checkWindow()
 
         let resp = await axios.get(uri)
@@ -372,7 +377,7 @@ async function amebaLogin(gameId) {
 
 async function live22Login(gameId, html5) {
 
-    console.log('html5: ',html5)
+    console.log('html5: ', html5)
 
     let uri = endpoint + '/live22/gameLogin?ClientType=0&GameId=' + gameId;
 
@@ -383,9 +388,9 @@ async function live22Login(gameId, html5) {
             location.href = resp.data.Url;
         } else {
             alert(JSON.stringify(result.data.message))
-             
+
         }
-    }else{
+    } else {
         checkWindow()
 
         let resp = await axios.get(uri)
@@ -410,9 +415,9 @@ async function spgLogin(gameId) {
             location.href = resp.data.url;
         } else {
             alert(JSON.stringify(result.data.message))
- 
+
         }
-    }else{
+    } else {
         checkWindow()
 
         let resp = await axios.get(uri)
@@ -431,7 +436,9 @@ async function pgLogin(gameId) {
     let uri = endpoint + '/pg/forward-to-game'
 
     if (isLine()) {
-        let data = { "gameCode": gameId }
+        let data = {
+            "gameCode": gameId
+        }
 
         let resp = await axios.post(uri, data)
 
@@ -439,12 +446,14 @@ async function pgLogin(gameId) {
             location.href = resp.data.result;
         } else {
             alert(JSON.stringify(resp.data.message))
-             
+
         }
-    }else{
+    } else {
         checkWindow()
 
-        let data = { "gameCode": gameId }
+        let data = {
+            "gameCode": gameId
+        }
 
         let resp = await axios.post(uri, data)
 
@@ -463,7 +472,9 @@ async function gamatronLogin(gameId) {
     let uri = endpoint + '/ganapati/forward-to-game'
 
     if (isLine()) {
-        let data = { "gameCode": gameId }
+        let data = {
+            "gameCode": gameId
+        }
 
         let resp = await axios.post(uri, data)
 
@@ -471,12 +482,14 @@ async function gamatronLogin(gameId) {
             location.href = resp.data.result;
         } else {
             alert(JSON.stringify(resp.data.message))
-          
+
         }
-    }else{
+    } else {
         checkWindow()
 
-        let data = { "gameCode": gameId }
+        let data = {
+            "gameCode": gameId
+        }
 
         let resp = await axios.post(uri, data)
 
@@ -487,5 +500,39 @@ async function gamatronLogin(gameId) {
             gameWindow.close();
         }
     }
+
+}
+
+
+async function gameLogin(gameId, gameKey, isActive) {
+
+    if (!isActive) {
+        alert('Coming Soon.');
+        return;
+    }
+
+    let uri = endpoint + `/ambgame/login?gameId=${gameId}&gameKey=${gameKey}`;
+
+    if (isLine()) {
+        let resp = await axios.get(uri)
+
+        if (resp.data.code == 0) {
+            location.href = resp.data.result;
+        } else {
+            alert(JSON.stringify(resp.data.message))
+        }
+    }else{
+        checkWindow()
+
+        let resp = await axios.get(uri)
+
+        if (resp.data.code == 0) {
+            gameWindow.location.href = resp.data.result;
+        } else {
+            alert(JSON.stringify(resp.data.message))
+            gameWindow.close();
+        }
+    }
+    
 
 }
