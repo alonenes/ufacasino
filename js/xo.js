@@ -39,7 +39,7 @@ $(function () {
     }
 
     if (type == 'amb') {
-        gameLogin();
+        getAmbgame();
     }
 });
 
@@ -260,7 +260,7 @@ async function getAmbgame() {
             var cal = 12 - listGame.length;
             for (var i = 0; i < cal; i++) {
                 var j = {
-                    imageUrl: 'image/comingsoon.png',
+                    imageUrl: 'images/comingsoon.png',
                     isActive: false,
                     gameName: 'Coming Soon.'
                 }
