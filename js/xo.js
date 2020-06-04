@@ -37,6 +37,10 @@ $(function() {
     if (type == 'pg') {
         getGamePG();
     }
+
+    if (type == 'amb') {
+        getAmbgame();
+    }
 });
 
 
@@ -239,6 +243,41 @@ async function getGameListGamatron() {
                 </div>
             </div>
         </div>`)
+        })
+    }
+
+}
+
+async function getAmbgame() {
+
+    let uri = endpoint + '/ambgame/getGameList';
+
+    let resp = await axios.get(uri)
+
+    if (resp.data.code == 0) {
+        listGame = resp.data.data
+        if (listGame.length < 12) {
+            var cal = 12 - listGame.length;
+            for (var i = 0; i < cal; i++) {
+                var j = {
+                    imageUrl: 'images/comingsoon.png',
+                    isActive: false,
+                    gameName: 'Coming Soon.'
+                }
+                listGame.push(j);
+            }
+        }
+        listGame.forEach(data => {
+            $('#gameList').append(`
+        <div class="mb-4 col-md-2 col-4">
+          <div class="card-promotion-landing card-promotion-landing1">
+              <div onclick="gameLogin('${data.gameId}','${data.gameKey}',${data.isActive})" class="img img-amb" style="background-image: url(${data.imageUrl});"></div>
+              <div class="caption text-center text-overflow">
+                  <a class="text-game-color">${data.gameName}</a>
+              </div>
+          </div>
+      </div>`)
+
         })
     }
 
@@ -448,5 +487,38 @@ async function gamatronLogin(gameId) {
             gameWindow.close();
         }
     }
+
+}
+
+async function gameLogin(gameId, gameKey, isActive) {
+
+    if (!isActive) {
+        alert('Coming Soon.');
+        return;
+    }
+
+    let uri = endpoint + `/ambgame/login?gameId=${gameId}&gameKey=${gameKey}`;
+
+    if (isLine()) {
+        let resp = await axios.get(uri)
+
+        if (resp.data.code == 0) {
+            location.href = resp.data.result;
+        } else {
+            alert(JSON.stringify(resp.data.message))
+        }
+    }else{
+        checkWindow()
+
+        let resp = await axios.get(uri)
+
+        if (resp.data.code == 0) {
+            gameWindow.location.href = resp.data.result;
+        } else {
+            alert(JSON.stringify(resp.data.message))
+            gameWindow.close();
+        }
+    }
+    
 
 }
