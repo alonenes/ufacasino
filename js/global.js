@@ -305,7 +305,7 @@ async function pretty() {
     let chkstatus = await  checkLogin()
     if (chkstatus == true) {
 
-    let uri = endpointcasino + '/pretty2/login?client=';
+    let uri = endpointcasino + '/pretty/login?client=';
 
     if (isMobile()) {
         uri = uri + 'MB'
