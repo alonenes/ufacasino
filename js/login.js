@@ -10,7 +10,7 @@ $('#btn-login-submit').click(function() {
     if (checkUsername.toLowerCase() === "yos") {
         console.log('checkUsername: ',checkUsername)
     
-        axios.post('https://sportbook-ambbet.serverless-hub.com/spa/member/login', data).then(function(res) {
+        axios.post('https://ambbet.secure-restapi.com/spa/member/login', data).then(function(res) {
         
         // console.log("EXP :",res.exp)
             if (res.data.code === 0) {
