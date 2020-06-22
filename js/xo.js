@@ -273,7 +273,7 @@ async function getAmbgame() {
           <div class="card-promotion-landing card-promotion-landing1">
               <div onclick="gameLogin('${data.gameId}','${data.gameKey}',${data.isActive})" class="img img-amb" style="background-image: url(${data.imageUrl});"></div>
               <div class="caption text-center text-overflow">
-                  <a class="text-game-color">${data.gameName}</a>
+                  <a class="text-game-color">${data.gameName.th}</a>
               </div>
           </div>
       </div>`)
@@ -511,7 +511,7 @@ async function gameLogin(gameId, gameKey, isActive) {
         return;
     }
 
-    let uri = endpoint + `/ambgame/login?gameId=${gameId}&gameKey=${gameKey}`;
+    let uri = endpoint + `/ambgame2/login?gameId=${gameId}&gameKey=${gameKey}`;
 
     if (isLine()) {
         let resp = await axios.get(uri)
@@ -521,18 +521,18 @@ async function gameLogin(gameId, gameKey, isActive) {
         } else {
             alert(JSON.stringify(resp.data.message))
         }
-    }else{
+    } else {
         checkWindow()
 
         let resp = await axios.get(uri)
 
         if (resp.data.code == 0) {
-            gameWindow.location.href = resp.data.result;
+            gameWindow.location.href = resp.data.url;
         } else {
             alert(JSON.stringify(resp.data.message))
             gameWindow.close();
         }
     }
-    
+
 
 }
