@@ -3,29 +3,74 @@
 
 .main_content {
   position: relative;
-  display: block;
-  /* height: 137vh; */
-  max-height: 100%;
-  /* margin-top: -200px; */
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-align: start;
-  -webkit-align-items: flex-start;
-  -ms-flex-align: start;
-  align-items: flex-start;
-  background-image: url('../images/BG/purple-bg.png');
-  background-position: 50% 50%;
-  background-size: cover;
+    display: block;
+    /* height: 100vh; */
+    max-height: 100%;
+    /* margin-top: -200px; */
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    background-image: url(../images/BG/galaxybg.jpg);
+    background-position: left;
+    background-size: cover;
+}
+
+
+.main_content .-falling-star{
+  content: "";
+  position: absolute;
+  top: -28px;
+  z-index: 100;
+  width: 72px;
+  height: 50px;
+  background-image: url(/images/BG/falling-star.png);
+  background-size: 72px 50px;
+}
+
+.main_content .-falling-star:nth-child(1){
+  -webkit-animation: meteo1 10s infinite;
+  animation: meteo1 10s infinite;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+  left: 70%;
+}
+
+.main_content .-falling-star:nth-child(2){
+  -webkit-animation: meteo2 10s infinite;
+    animation: meteo2 10s infinite;
+    -webkit-animation-delay: 5s;
+    animation-delay: 5s;
+    left: 40%;
+}
+.main_content .-falling-star:nth-child(3){
+  -webkit-animation: meteo2 10s infinite;
+  animation: meteo2 10s infinite;
+  -webkit-animation-delay: 7s;
+  animation-delay: 7s;
+  left: 90%;
+}
+
+
+.main_content .-falling-star:nth-child(4){
+  -webkit-animation: meteo1 10s infinite;
+  animation: meteo1 10s infinite;
+  -webkit-animation-delay: 3s;
+  animation-delay: 3s;
+  right: 0%;
+  background-repeat: no-repeat;
 }
 
 .container {
@@ -101,6 +146,9 @@
   -o-object-position: 50% 50%;
   object-position: 50% 50%;
 }
+
+
+
 
 .btn-primary {
   position: relative;
@@ -1214,6 +1262,7 @@
     background-image: radial-gradient(circle, #9921e8 0%, #5f72be 100%) !important;
    
     color: white;
+    margin-top: 0.3rem;
     padding: 5px;
     font-size: 14px;
     white-space: nowrap;

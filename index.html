@@ -27,6 +27,11 @@
 <body class="body">
   <div data-include="navbar"></div>
   <div class="main_content">
+    <div class="-falling-star"></div>
+    <div class="-falling-star"></div>
+    <div class="-falling-star"></div>
+    <div class="-falling-star"></div>
+    <!-- <img src="/images/BG/falling-star.png" alt=""> -->
     <div class="section-header">
       <div data-include="pop-menu"></div>
       <div class="div-bg-container">
@@ -55,7 +60,7 @@
           </div>
           <!-- <h1 class="subtitle-casino">สล็อต</h1> -->
           <ul class="list-logo w-list-unstyled">
-            <li onclick="location.href='slot.html?game=xo'" class="item-nav"><img src="images/btn/btn/slot-1.png" width="70" alt="" class="nav-logo"></li>
+            <li onclick="location.href='slot.html?game=amb'" class="item-nav"><img src="images/btn/btn/slot-8.png" width="70"  alt="" class="nav-logo"></li>
             <li onclick="location.href='slot.html?game=live22'" class="item-nav"><img src="images/btn/btn/slot-2.png" width="70"  alt="" class="nav-logo"></li>
             <li onclick="location.href='slot.html?game=spg'" class="item-nav"><img src="images/btn/btn/slot-3.png" width="70"  alt="" class="nav-logo"></li>
             <li onclick="location.href='slot.html?game=ds'" class="item-nav"><img src="images/btn/btn/slot-4.png" width="70"  alt="" class="nav-logo"></li>
@@ -64,7 +69,7 @@
             <li onclick="location.href='slot.html?game=ameba'" class="item-nav"><img src="images/btn/btn/slot-5.png" width="70"  alt="" class="nav-logo"></li>
             <li onclick="location.href='slot.html?game=gamatron'" class="item-nav"><img src="images/btn/btn/slot-6.png" width="70"  alt="" class="nav-logo"></li>
             <li onclick="location.href='slot.html?game=pg'" class="item-nav"><img src="images/btn/btn/slot-7.png" width="70"  alt="" class="nav-logo"></li>
-            <li onclick="location.href='slot.html?game=amb'" class="item-nav"><img src="images/btn/btn/slot-8.png" width="70"  alt="" class="nav-logo"></li>
+            <li onclick="location.href='slot.html?game=xo'" class="item-nav"><img src="images/btn/btn/slot-1.png" width="70" alt="" class="nav-logo"></li>
           </ul>
         </div>
         <div class="nav-container casino-container">
@@ -74,11 +79,11 @@
             <img src="/images/btn/casino.png" alt="" class="img-logo-header">
           </div>
           <ul class="list-logo w-list-unstyled">
+            <li onclick="pretty()" class="item-nav "><img src="images/btn/btn/casino-5.png" width="70"  alt="" class="nav-logo "></li>
             <li onclick="saGame()" class="item-nav"><img src="images/btn/btn/casino-1.png" width="70"  alt="" class="nav-logo"></li>
             <li onclick="sexy()" class="item-nav"><img src="images/btn/btn/casino-4.png" width="70" alt="" class="nav-logo "></li>
             <li onclick="ag()" class="item-nav"><img src="images/btn/btn/casino-3.png" width="70"  alt="" class="nav-logo "></li>
             <li onclick="dream()" class="item-nav"><img src="images/btn/btn/casino-2.png" width="70"  alt="" class="nav-logo "></li>
-            <li onclick="pretty()" class="item-nav "><img src="images/btn/btn/casino-5.png" width="70"  alt="" class="nav-logo "></li>
           </ul>
           <!-- <ul class="list-logo w-list-unstyled">
             <li onclick="pretty()" class="item-nav hide-mb"><img src="images/btn/btn/casino-5.png" width="70"  alt="" class="nav-logo "></li>
@@ -156,6 +161,15 @@
               </div>
               <div data-w-tab="2" class="w-tab-pane">
                 <div class="w-container">
+                  <div onclick="pretty()" class="container-casino">
+                    <img src="images/casinoband-4.jpg" width="400"  alt="" class="img-logo-casino casino-grow">
+                    <div class="middle" style="top: 50%;left: 50%;">
+                      <div class="text-game-logo">เข้าเล่น PRETTY Gaming</div>
+                    </div>
+                    <div class="middle-mb" style="top: 50%;left: 23.5%;">
+                      <div class="text-game-logo mb"style="font-size: 13px;">เข้าเล่น PRETTY Gaming</div>
+                    </div>
+                  </div>
                   <div onclick="saGame()" class="container-casino">
                     <img src="images/casinoband-5.jpg" width="400"  alt="" class="img-logo-casino casino-grow">
                     <div class="middle" style="top: 50%;left: 50%;">
@@ -192,19 +206,20 @@
                       <div class="text-game-logo mb"style="font-size: 13px;">เข้าเล่น DREAM Gaming</div>
                     </div>
                   </div>
-                  <div onclick="pretty()" class="container-casino">
-                    <img src="images/casinoband-4.jpg" width="400"  alt="" class="img-logo-casino casino-grow">
-                    <div class="middle" style="top: 50%;left: 50%;">
-                      <div class="text-game-logo">เข้าเล่น PRETTY Gaming</div>
-                    </div>
-                    <div class="middle-mb" style="top: 50%;left: 23.5%;">
-                      <div class="text-game-logo mb"style="font-size: 13px;">เข้าเล่น PRETTY Gaming</div>
-                    </div>
-                  </div>
+                  
                 </div>
               </div>
               <div data-w-tab="3" class="w-tab-pane">
                 <div class="w-container">
+                  <div onclick="location.href='slot.html?game=amb'" class="container-casino">
+                    <img src="images/slotband-8.jpg" width="400"  alt="" class="img-logo-casino casino-grow">
+                    <div class="middle" style="top: 50%;left: 50%;">
+                      <div class="text-game-logo slot">เข้าเล่นเกมส์สล็อต</div>
+                    </div>
+                    <div class="middle-mb" style="top: 50%;left: 30%;">
+                      <div class="text-game-logo mb slot" style="font-size: 13px;">เข้าเล่นเกมส์สล็อต</div>
+                    </div>
+                  </div>
                   <div onclick="location.href='slot.html?game=xo'" class="container-casino">
                     <img src="images/slotband-2.jpg" width="400"  alt="" class="img-logo-casino casino-grow">
                     <div class="middle" style="top: 50%;left: 50%;">
@@ -268,15 +283,7 @@
                       <div class="text-game-logo mb slot" style="font-size: 13px;">เข้าเล่นเกมส์สล็อต</div>
                     </div>
                   </div>
-                  <div onclick="location.href='slot.html?game=amb'" class="container-casino">
-                    <img src="images/slotband-8.jpg" width="400"  alt="" class="img-logo-casino casino-grow">
-                    <div class="middle" style="top: 50%;left: 50%;">
-                      <div class="text-game-logo slot">เข้าเล่นเกมส์สล็อต</div>
-                    </div>
-                    <div class="middle-mb" style="top: 50%;left: 30%;">
-                      <div class="text-game-logo mb slot" style="font-size: 13px;">เข้าเล่นเกมส์สล็อต</div>
-                    </div>
-                  </div>
+                  
                 </div>
               </div>
             </div>

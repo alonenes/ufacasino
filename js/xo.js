@@ -250,7 +250,7 @@ async function getGameListGamatron() {
 
 async function getAmbgame() {
 
-    let uri = endpoint + '/ambgame/getGameList';
+    let uri = endpoint + '/ambgame2/getGameList';
 
     let resp = await axios.get(uri)
 
@@ -268,12 +268,11 @@ async function getAmbgame() {
             }
         }
         listGame.forEach(data => {
-            $('#gameList').append(`
-        <div class="mb-4 col-md-2 col-4">
+            $('#gameList').append(`<div class="mb-4 col-md-2 col-4">
           <div class="card-promotion-landing card-promotion-landing1">
               <div onclick="gameLogin('${data.gameId}','${data.gameKey}',${data.isActive})" class="img img-amb" style="background-image: url(${data.imageUrl});"></div>
               <div class="caption text-center text-overflow">
-                  <a class="text-game-color">${data.gameName}</a>
+                  <a class="text-game-color">${data.gameName.th}</a>
               </div>
           </div>
       </div>`)
@@ -497,15 +496,16 @@ async function gameLogin(gameId, gameKey, isActive) {
         return;
     }
 
-    let uri = endpoint + `/ambgame/login?gameId=${gameId}&gameKey=${gameKey}`;
+    let uri = endpoint + `/ambgame2/login?gameId=${gameId}&gameKey=${gameKey}`;
 
     if (isLine()) {
         let resp = await axios.get(uri)
 
         if (resp.data.code == 0) {
-            location.href = resp.data.result;
+           location.href = resp.data.url;
         } else {
             alert(JSON.stringify(resp.data.message))
+            gameWindow.close();
         }
     }else{
         checkWindow()
@@ -513,7 +513,7 @@ async function gameLogin(gameId, gameKey, isActive) {
         let resp = await axios.get(uri)
 
         if (resp.data.code == 0) {
-            gameWindow.location.href = resp.data.result;
+            gameWindow.location.href = resp.data.url;
         } else {
             alert(JSON.stringify(resp.data.message))
             gameWindow.close();

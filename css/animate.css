@@ -8,6 +8,41 @@
  * Copyright (c) 2019 Daniel Eden
  */
 
+@keyframes meteo1{
+
+  0% {
+    opacity: 1;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+}
+20% {
+    opacity: 0;
+    -webkit-transform: translate3d(-270px,180px,0);
+    transform: translate3d(-53rem,33rem,0);
+}
+100% {
+    opacity: 0;
+}
+
+}
+
+@keyframes meteo2{
+  0% {
+    opacity: 1;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+  25% {
+      opacity: 0;
+      -webkit-transform: translate3d(-270px,180px,0);
+      transform: translate3d(-35rem,20rem,0);
+  }
+  100% {
+      opacity: 0;
+  }
+
+}
+
 @keyframes translateY1{
     0% {
       -webkit-transform: translateY(0);
